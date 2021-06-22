@@ -67,3 +67,5 @@
 <!-- Theme switcher -->
 
 <script type="text/javascript" src="{{ asset('/assets/widgets/theme-switcher/themeswitcher.js') }}"></script>
+
+@stack('after-scripts')

@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class StaffTableSeeder extends Seeder
+class DepartmentStaffTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,10 +12,9 @@ class StaffTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('staff')->insert([
-            'university_id' => 1,
-            'name'          => 'haha',
-            'image'         => 'haha',
+        DB::table('department_staff')->insert([
+            'department_id' => 1,
+            'staff_id'      => 1
         ]);
     }
 }

@@ -14,8 +14,8 @@ class CreateDepartmentStaffTable extends Migration
     public function up()
     {
         Schema::create('department_staff', function (Blueprint $table) {
-            $table->integer('department_id');
-            $table->integer('staff_id');
+            $table->unsignedInteger('department_id');
+            $table->unsignedInteger('staff_id');
             $table->timestamps();
 
             $table->foreign('department_id')

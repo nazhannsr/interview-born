@@ -1,22 +1,32 @@
 @extends('layouts.app')
 
 @section('content')
+@if ($errors->has('email'))
+    <div class="alert-div animated fadeInUp">
+        <div>
+            <span class="invalid-feedback alert alert-danger" role="alert">
+                <strong>{{ $errors->first('email') }}</strong>
+                <span class="closebtn">&times;</span>
+            </span>
+        </div>
+    </div>
+@endif
 <div class="login animated fadeInUp">
     <div class="box-header">
         <h2>Log In</h2>
     </div>
+    {{-- {{dd(Session::all(), $errors->has('email'))}} --}}
     <form action="{{route('login')}}" method="POST" aria-label="{{ __('Login') }}">
         @csrf
+        
+        
         <div class="form-group row">
             <label for="email" class="col-sm-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
             <div class="col-md-6">
                 <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
-                @if ($errors->has('email'))
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $errors->first('email') }}</strong>
-                    </span>
-                @endif
+            
             </div>
+            
         </div>
         <div class="form-group row">
             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>

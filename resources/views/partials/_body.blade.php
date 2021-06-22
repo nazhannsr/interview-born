@@ -29,7 +29,7 @@
                 
                 <div class="container">
                     
-                    
+                    @include('partials._message')
                     @yield('content')
                 
                 </div>

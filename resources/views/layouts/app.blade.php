@@ -45,6 +45,7 @@
 
 <script>
 	$(document).ready(function () {
+
     	$('#header').addClass('animated fadeInDown');
     
     	$("input:text:visible:first").focus();
@@ -61,6 +62,10 @@
 	$('#password').blur(function() {
 		$('label[for="password"]').removeClass('selected');
 	});
+    $(".closebtn").on('click', function() {
+        $(this).closest("div").delay(200).fadeOut('slow');
+            // $(this).siblings().css('display', 'none');
+    })
 </script>
 
 </html>

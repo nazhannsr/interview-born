@@ -174,3 +174,48 @@ header img{
   -webkit-animation-delay: 1s;
 }
 
+span .invalid-feedback {
+    display:none;
+    width:100%;
+    margin-top:.25rem;
+    font-size:50%;
+    color:#e3342f;
+}
+
+.alert{
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius:.25rem;
+    opacity: 1;
+}
+
+.alert-danger{
+    color:#761b18;
+    background-color:#f9d6d5;
+    border-color:#f7c6c5
+}
+
+.alert-div {
+	margin: 0 auto;
+	position: relative;
+	top: 15px;
+	padding-bottom: 30px;
+	border-radius: 10px;
+	text-align: center;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: #761b18;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .closebtn:hover {
+    color: black;
+  }

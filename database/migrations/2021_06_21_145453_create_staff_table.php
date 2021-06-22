@@ -15,7 +15,7 @@ class CreateStaffTable extends Migration
     {
         Schema::create('staff', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('university_id');
+            $table->unsignedInteger('university_id');
             $table->string('name');
             $table->text('image');
             $table->timestamps();

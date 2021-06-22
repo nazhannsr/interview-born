@@ -21,3 +21,21 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('university', 'UniversityController@index')->name('university.index');
+Route::get('university/{university}/edit', 'UniversityController@edit')->name('university.edit');
+Route::post('university/{university}', 'UniversityController@update')->name('university.update');
+Route::get('university/create', 'UniversityController@create')->name('university.create');
+Route::post('university', 'UniversityController@store')->name('university.store');
+Route::delete('university/{university}', 'UniversityController@destroy')->name('university.destroy');
+Route::get('university/fetch_data', 'UniversityController@fetch_data')->name('university.pagination');
+
+Route::get('department', 'DepartmentController@index')->name('department.index');
+Route::get('department/{department}/edit', 'DepartmentController@edit')->name('department.edit');
+Route::post('department/{department}', 'DepartmentController@update')->name('department.update');
+Route::get('department/create', 'DepartmentController@create')->name('department.create');
+Route::post('department', 'DepartmentController@store')->name('department.store');
+Route::delete('department/{department}', 'Departmentcontroller@destroy')->name('department.destroy');
+Route::get('department/fetch_data', 'DepartmentController@fetch_data')->name('department.pagination');
+
+Route::get('staff', 'StaffController@index')->name('staff.index');
