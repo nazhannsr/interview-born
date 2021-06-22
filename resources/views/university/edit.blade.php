@@ -1,5 +1,8 @@
 @extends('layouts.master')
 
+@section('breadcrumb')
+    {{Breadcrumbs::render('university.edit', $university)}}
+@endsection
 @section('content')
     <div class="panel panel-default">
         <div class="panel-heading">

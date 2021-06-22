@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('breadcrumb')
-    {{Breadcrumbs::render('university')}}
+    {{Breadcrumbs::render('department', $university)}}
 @endsection
 
 @section('content')
@@ -9,15 +9,15 @@
         <div class="panel-heading">
             <div class="row">
                 <div class="col-md-11">
-                    <h3>University Management</h3>
+                    <h3>Department Management ({{ $university->acronym }})</h3>
                 </div>
                 <div class="col-md-1">
-                    <a href="{{ route('university.create')}}" class="btn btn-success">Create <i class="glyph-icon icon-plus"></i></a>
+                    <a href="{{ route('department.create', $university->id) }}" class="btn btn-success">Create <i class="glyph-icon icon-plus"></i></a>
                 </div>
             </div>
         </div>
         <div class="panel-body" id="table_data">
-            @include('pagination.university.index')
+            @include('pagination.department.index')
         </div>
     </div>
 @endsection
@@ -35,7 +35,7 @@ $(document).ready(function(){
     function fetch_data(page)
     {
         $.ajax({
-            url: "{{ route('university.pagination') }}",
+            url: "{{ route('department.pagination', $university->id) }}",
             data: {page : page},
             success:function(data)
             {

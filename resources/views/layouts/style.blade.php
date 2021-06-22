@@ -141,3 +141,5 @@
 <!--<script type="text/javascript" src="{{ asset('/assets/js-core/transition.js') }}"></script>-->
 <script type="text/javascript" src="{{ asset('/assets/js-core/modernizr.js') }}"></script>
 <script type="text/javascript" src="{{ asset('/assets/js-core/jquery-cookie.js') }}"></script>
+
+@stack('after-styles')

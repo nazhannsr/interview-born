@@ -1,3 +1,4 @@
+@stack('before-scripts')
 <!-- WIDGETS -->
 
 <script type="text/javascript" src="{{ asset('/assets/bootstrap/js/bootstrap.js') }}"></script>

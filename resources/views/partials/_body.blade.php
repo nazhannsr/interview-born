@@ -26,7 +26,7 @@
 
         <div id="page-content-wrapper">
             <div id="page-content">
-                
+                @yield('breadcrumb')
                 <div class="container">
                     
                     @include('partials._message')

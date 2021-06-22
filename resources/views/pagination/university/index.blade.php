@@ -23,6 +23,7 @@
                         @csrf
                         @method('DELETE')
                         <a href="{{route('university.edit', $university->id)}}" class="btn btn-info" alt="Edit"><i class="glyph-icon icon-pencil"></i></a>
+                        <a href="{{route('department.index', $university->id) }}" class="btn btn-warning">Department Manage</a>
                         <button class="btn btn-danger" alt="Delete"><i class="glyph-icon icon-trash"></i></button>
                     </div>
                 </form>

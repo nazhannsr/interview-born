@@ -30,12 +30,12 @@ Route::post('university', 'UniversityController@store')->name('university.store'
 Route::delete('university/{university}', 'UniversityController@destroy')->name('university.destroy');
 Route::get('university/fetch_data', 'UniversityController@fetch_data')->name('university.pagination');
 
-Route::get('department', 'DepartmentController@index')->name('department.index');
-Route::get('department/{department}/edit', 'DepartmentController@edit')->name('department.edit');
-Route::post('department/{department}', 'DepartmentController@update')->name('department.update');
-Route::get('department/create', 'DepartmentController@create')->name('department.create');
-Route::post('department', 'DepartmentController@store')->name('department.store');
+Route::get('department/{university}', 'DepartmentController@index')->name('department.index');
+Route::get('department/{university}/{department}/edit', 'DepartmentController@edit')->name('department.edit');
+Route::post('department/{university}/{department}', 'DepartmentController@update')->name('department.update');
+Route::get('department/{university}/create', 'DepartmentController@create')->name('department.create');
+Route::post('department/{university}', 'DepartmentController@store')->name('department.store');
 Route::delete('department/{department}', 'Departmentcontroller@destroy')->name('department.destroy');
-Route::get('department/fetch_data', 'DepartmentController@fetch_data')->name('department.pagination');
+Route::get('department/{university}/fetch_data', 'DepartmentController@fetch_data')->name('department.pagination');
 
 Route::get('staff', 'StaffController@index')->name('staff.index');

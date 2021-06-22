@@ -1,15 +1,18 @@
 @extends('layouts.master')
 
 @section('breadcrumb')
-    {{Breadcrumbs::render('university.create')}}
+    {{Breadcrumbs::render('department.edit', $university, $department)}}
 @endsection
-
 @section('content')
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h3>Create New University</h3>
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>Edit {{$department->name }} ({{$department->acronym}}) Department</h3>
+                </div>
+            </div>
         </div>
-        <form action="{{ route('university.store') }}" method="post" enctype="multipart/form-data">
+        <form action="{{ route('department.update', [$university->id, $department->id]) }}" method="post">
             @csrf
             <div class="panel-body">
                 <div class="row">
@@ -17,7 +20,7 @@
                         <label for="name">Name</label>
                     </div>
                     <div class="col-md-8">
-                        <input type="text" class="input" name="name" id="name" value="{{ old('name')}}">
+                        <input type="text" name="name" id="name" class="input" value="{{ $department->name }}" required>
                     </div>
                 </div>
                 <br>
@@ -26,16 +29,7 @@
                         <label for="acronym">Acronym</label>
                     </div>
                     <div class="col-md-8">
-                        <input type="text" class="input" name="acronym" id="acronym" value="{{ old('acronym')}}">
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-md-4">
-                        <label for="image">Image</label>
-                    </div>
-                    <div class="col-md-8">
-                        <input type="file" class="input" name="image" id="image">
+                        <input type="text" name="acronym" id="acronym" class="input" value="{{ $department->acronym }}" required>
                     </div>
                 </div>
             </div>
@@ -43,6 +37,5 @@
                 <button type="submit" class="btn btn-success">Submit</button>
             </div>
         </form>
-        
     </div>
 @endsection

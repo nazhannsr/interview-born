@@ -15,12 +15,12 @@
                 University Management
             </a>
         </li>
-        <li>
+        {{-- <li>
             <a href="{{ route('department.index') }}">
                 <i class="glyph-icon icon-book"></i>
                 Department Management
             </a>
-        </li>
+        </li> --}}
         <li>
             <a href="{{ route('staff.index') }}">
                 <i class="glyph-icon icon-group"></i>
