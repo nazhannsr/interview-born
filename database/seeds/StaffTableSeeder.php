@@ -12,10 +12,6 @@ class StaffTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('staff')->insert([
-            'university_id' => 1,
-            'name'          => 'haha',
-            'image'         => 'haha',
-        ]);
+        $staffs = factory(App\Models\Staff::class, 30)->create();
     }
 }

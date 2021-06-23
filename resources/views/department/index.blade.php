@@ -12,7 +12,7 @@
                     <h3>Department Management ({{ $university->acronym }})</h3>
                 </div>
                 <div class="col-md-1">
-                    <a href="{{ route('department.create', $university->id) }}" class="btn btn-success">Create <i class="glyph-icon icon-plus"></i></a>
+                    <a href="{{ route('department.create', $university->id) }}" class="btn btn-success" title="Create">Create <i class="glyph-icon icon-plus"></i></a>
                 </div>
             </div>
         </div>

@@ -388,6 +388,7 @@ body #nav-toggle.collapsed span {
 /* Page content wrapper */
 
 #page-content-wrapper {
+    margin-top: 78px;
     float: left;
     width: 100%;
     position: relative;
@@ -450,6 +451,8 @@ body #nav-toggle.collapsed span {
 /* Fixed header */
 
 .fixed-header #page-header {
+    background: url('/../assets/image-resources/poly-bg/bg-poly5.png') no-repeat center center fixed;
+    background-size: cover;
     position: fixed;
     width: 100%;
     top: 0;
@@ -461,6 +464,7 @@ body #nav-toggle.collapsed span {
 /* Fixed sidebar */
 
 .fixed-sidebar #page-sidebar {
+    margin-top: 78px;
     position: fixed;
 }
 .fixed-sidebar #page-header #close-sidebar {

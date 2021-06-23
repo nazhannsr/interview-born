@@ -22,7 +22,8 @@ class CreateStaffTable extends Migration
 
             $table->foreign('university_id')
                   ->references('id')
-                  ->on('universities');
+                  ->on('universities')
+                  ->onDelete('cascade');
         });
     }
 

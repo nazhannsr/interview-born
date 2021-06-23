@@ -41,8 +41,33 @@ Breadcrumbs::for('department.edit', function ($trail, $university, $department) 
     $trail->push('Edit', route('department.edit', [$university->id, $department->id]));
 });
 
+//Home > University > [Department] > [Staff]
+Breadcrumbs::for('department.staff', function ($trail, $university, $department) {
+    $trail->parent('department', $university);
+    $trail->push('Staff Management ('.$department->acronym.')', route('department.staff.index', [$university->id, $department->id]));
+});
+
+//Home > University > [Department] > [Staff] > Create
+Breadcrumbs::for('department.staff.create', function ($trail, $university, $department) {
+    $trail->parent('department.staff', $university, $department);
+    $trail->push('Create', route('department.staff.create', [$university->id, $department->id]));
+});
+
 // Home > Staff
 Breadcrumbs::for('staff', function ($trail) {
     $trail->parent('home');
     $trail->push('Staff', route('staff.index'));
 });
+
+// Home > Staff > Create
+Breadcrumbs::for('staff.create', function ($trail) {
+    $trail->parent('staff');
+    $trail->push('Create', route('staff.create'));
+});
+
+// Home > Staff > Edit
+Breadcrumbs::for('staff.edit', function ($trail, $staff) {
+    $trail->parent('staff');
+    $trail->push('Edit', route('staff.edit', $staff->id));
+});
+

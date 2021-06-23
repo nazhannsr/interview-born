@@ -16,13 +16,13 @@
                 <td>{{$department->name}}</td>
                 <td>{{$department->acronym}}</td>
                 <td>{{$department->university->name}}</td>
-                <td>Staff count</td>
+                <td><a href="{{ route('department.staff.index', [$university->id, $department->id]) }}" class="btn btn-success" title="Staff Management">{{$department->staffs->count()}}</a></td>
                 <td>
                     <form action="{{ route('department.destroy', $department->id) }}" method="post">
                         @csrf
                         @method('DELETE')
-                        <a href="{{ route('department.edit', [$university->id, $department->id]) }}" class="btn btn-info"><i class="glyph-icon icon-pencil"></i></a>
-                        <button type="submit" class="btn btn-danger"><i class="glyph-icon icon-trash"></i></button>
+                        <a href="{{ route('department.edit', [$university->id, $department->id]) }}" class="btn btn-info" title="Edit"><i class="glyph-icon icon-pencil"></i></a>
+                        <button type="submit" class="btn btn-danger" title="Delete"><i class="glyph-icon icon-trash"></i></button>
                     </form>
                 </td>
             </tr>

@@ -9,4 +9,8 @@ class Department extends Model
     public function university() {
         return $this->belongsTo(University::class);
     }
+
+    public function staffs() {
+        return $this->belongsToMany(Staff::class)->withTimestamps();
+    }
 }

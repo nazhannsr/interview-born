@@ -20,11 +20,13 @@ class CreateDepartmentStaffTable extends Migration
 
             $table->foreign('department_id')
                   ->references('id')
-                  ->on('departments');
+                  ->on('departments')
+                  ->onDelete('cascade');
 
             $table->foreign('staff_id')
                   ->references('id')
-                  ->on('staff');
+                  ->on('staff')
+                  ->onDelete('cascade');
         });
     }
 

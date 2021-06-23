@@ -23,6 +23,14 @@
                 $('#loading').fadeOut( 400, "linear" );
             }, 300);
         });
+
+        $(window).scroll(function() {
+            if ($(this).scrollTop()) {
+                $('#toTop').fadeIn();
+            } else {
+                $('#toTop').fadeOut();
+            }
+        });
     </script>
 
 

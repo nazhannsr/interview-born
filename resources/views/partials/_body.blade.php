@@ -10,17 +10,19 @@
     </div>
 
     <div id="page-wrapper">
-        <div id="page-header">
-        
-        @include('partials._header')
-
+        <div class="fixed-header">
+            <div id="page-header">
+                @include('partials._header')
+            </div>
         </div>
-
-        <div id="page-sidebar">
-            <div class="scroll-sidebar">
-            
-            @include('partials._sidebar')
-            
+        
+        <div class="fixed-sidebar">
+            <div id="page-sidebar">
+                <div class="scroll-sidebar">
+                
+                @include('partials._sidebar')
+                
+                </div>
             </div>
         </div>
 
@@ -31,9 +33,9 @@
                     
                     @include('partials._message')
                     @yield('content')
-                
                 </div>
             </div>
+
         </div>
 
         @include('partials._footer')

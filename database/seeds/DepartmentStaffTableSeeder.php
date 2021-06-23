@@ -2,7 +2,8 @@
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-
+use App\Models\Department;
+use App\Models\Staff;
 class DepartmentStaffTableSeeder extends Seeder
 {
     /**
@@ -12,9 +13,11 @@ class DepartmentStaffTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('department_staff')->insert([
-            'department_id' => 1,
-            'staff_id'      => 1
-        ]);
+        foreach(Department::all() as $department) {
+            $staffs = Staff::where('university_id', $department->university_id)->inRandomOrder()->take(rand(1,5))->pluck('id');
+            foreach($staffs as $staff) {
+                $department->staffs()->attach($staff);
+            }
+        }
     }
 }

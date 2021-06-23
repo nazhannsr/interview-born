@@ -27,18 +27,35 @@ class UniversityController extends Controller
     }
 
     public function update(Request $request, University $university) {
+        if(isset($request->image)){
+        $validated = $request->validate([
+            'image'     => 'required|mimes:jpeg,jpg,png,jfif,svg|max:2048',
+            ]);
+        }
         $validated = $request->validate([
             'name'      => 'required',
             'acronym'     => 'required',
-            'image'     => 'required|mimes:jpeg,jpg,png,jfif,svg|max:2048',
         ]);
 
-        $imageName = time().'.'.$request->image->getClientOriginalExtension();
-        $request->image->move(public_path('images'), $imageName);
+        if(isset($request->image)){
+            $imageName = $university->image;
+            File::delete(public_path('images/'.$imageName));
+    
+            $imageName = time().'.'.$request->image->getClientOriginalExtension();
+            $request->image->move(public_path('images'), $imageName);
+            $university->image      = $imageName;
+        }
 
         $university->name       = $request->name;
         $university->acronym    = $request->acronym;
-        $university->image      = $imageName;
+        $university->rating     = (isset($request->rating))? $request->rating : null;
+        $university->address1   = (isset($request->address1))? $request->address1 : null;
+        $university->address2   = (isset($request->address2))? $request->address2 : null;
+        $university->address3   = (isset($request->address3))? $request->address3 : null;
+        $university->postcode  = (isset($request->postcode))? $request->postcode : null;
+        $university->city       = (isset($request->city))? $request->city : null;
+        $university->state      = (isset($request->state))? $request->state : null;
+        $university->country    = (isset($request->country))? $request->country : null;
         $university->save();
 
         return redirect()->back()->with('success', 'Update successful');

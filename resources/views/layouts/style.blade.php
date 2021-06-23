@@ -142,4 +142,15 @@
 <script type="text/javascript" src="{{ asset('/assets/js-core/modernizr.js') }}"></script>
 <script type="text/javascript" src="{{ asset('/assets/js-core/jquery-cookie.js') }}"></script>
 
+<style>
+    #toTop {
+    padding: 5px 3px;
+    background: #000;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    right: 5px;
+    display: none;
+}
+</style>
 @stack('after-styles')

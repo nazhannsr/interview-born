@@ -17,6 +17,14 @@ class CreateUniversitiesTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('acronym');
+            $table->string('address1')->nullable();
+            $table->string('address2')->nullable();
+            $table->string('address3')->nullable();
+            $table->string('postcode')->nullable();
+            $table->string('city')->nullable();
+            $table->string('state')->nullable();
+            $table->string('country')->default('Malaysia');
+            $table->double('rating', 10, 2)->nullable();
             $table->text('image');
             $table->timestamps();
         });
