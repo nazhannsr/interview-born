@@ -15,7 +15,7 @@ class UniversityTableSeeder extends Seeder
         DB::table('universities')->insert([
             'name'      => 'International Islamic University Malaysia',
             'acronym'   => 'IIUM',
-            'image'     => 'iium.png',
+            'image'     => 'images/iium.png',
             'address1'  => 'International Islamic University Malaysia',
             'address2'  => 'Jalan Gombak',
             'postcode'  => '53100',
@@ -27,7 +27,7 @@ class UniversityTableSeeder extends Seeder
         DB::table('universities')->insert([
             'name'      => 'University Teknologi MARA',
             'acronym'   => 'UiTM',
-            'image'     => 'uitm.png',
+            'image'     => 'images/uitm.png',
             'address1'  => 'University Teknologi MARA',
             'address2'  => 'Jalan Ilmu 1/1',
             'postcode'  => '40450 ',
@@ -39,7 +39,7 @@ class UniversityTableSeeder extends Seeder
         DB::table('universities')->insert([
             'name'      => 'University of Technology Malaysia',
             'acronym'   => 'UTM',
-            'image'     => 'utm.png',
+            'image'     => 'images/utm.png',
             'address1'  => 'International Islamic University Malaysia',
             'address2'  => 'Jalan Gombak',
             'postcode'  => '53100',
@@ -51,7 +51,7 @@ class UniversityTableSeeder extends Seeder
         DB::table('universities')->insert([
             'name'      => 'University of Science Malaysia',
             'acronym'   => 'USM',
-            'image'     => 'usm.png',
+            'image'     => 'images/usm.png',
             'address1'  => 'International Islamic University Malaysia',
             'address2'  => 'Sultan Ibrahim Chancellery Building',
             'address3'  => 'Jalan Iman',
@@ -64,7 +64,7 @@ class UniversityTableSeeder extends Seeder
         DB::table('universities')->insert([
             'name' => 'University Malaya',
             'acronym'   => 'UM',
-            'image'     => 'um.png',
+            'image'     => 'images/um.png',
             'address1'  => 'University Malaya',
             'address2'  => 'Jln Profesor Diraja Ungku Aziz',
             'postcode'  => '50603',

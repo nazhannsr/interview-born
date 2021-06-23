@@ -27,7 +27,7 @@
                     </div>
                     <div class="col-md-10">
                         <div class="col-md-2">
-                            <img src="{{asset('images/'.$staff->image)}}" class="img-preview" alt="{{$staff->name}}">
+                            <img src="{{asset($staff->image)}}" class="img-preview" alt="{{$staff->name}}">
                         </div>
                         <div class="col-md-10">
                             <input type="file" class="input" name="image" id="image">

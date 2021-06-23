@@ -11,7 +11,7 @@
         <tr>
             <th scope="row">{{\App\Http\Controllers\DepartmentStaffController::getPaginate()*($staffs->currentPage() -1)+$loop->iteration}}</th>
             <td>
-                <img src="{{asset('images/'.$staff->image)}}" class="img-small" alt="{{$staff->name}}">
+                <img src="{{asset($staff->image)}}" class="img-small" alt="{{$staff->name}}">
             </td>
             <td>{{$staff->name}}</td>
             <td>{{$staff->university->name}}</td>

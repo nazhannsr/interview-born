@@ -38,12 +38,12 @@ class UniversityController extends Controller
         ]);
 
         if(isset($request->image)){
-            $imageName = $university->image;
-            File::delete(public_path('images/'.$imageName));
+            // $imageName = $university->image;
+            // File::delete(public_path('images/'.$imageName));
     
             $imageName = time().'.'.$request->image->getClientOriginalExtension();
             $request->image->move(public_path('images'), $imageName);
-            $university->image      = $imageName;
+            $university->image      = 'images/'.$imageName;
         }
 
         $university->name       = $request->name;

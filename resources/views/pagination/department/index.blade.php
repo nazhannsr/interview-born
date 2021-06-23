@@ -22,7 +22,7 @@
                         @csrf
                         @method('DELETE')
                         <a href="{{ route('department.edit', [$university->id, $department->id]) }}" class="btn btn-info" title="Edit"><i class="glyph-icon icon-pencil"></i></a>
-                        <button type="submit" class="btn btn-danger" title="Delete"><i class="glyph-icon icon-trash"></i></button>
+                        <button type="submit" class="btn btn-danger" title="Delete" onclick="return confirm('Are you sure? All data linked to this item will be deleted!')"><i class="glyph-icon icon-trash"></i></button>
                     </form>
                 </td>
             </tr>

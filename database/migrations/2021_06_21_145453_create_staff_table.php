@@ -17,7 +17,7 @@ class CreateStaffTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('university_id');
             $table->string('name');
-            $table->text('image');
+            $table->string('image')->default('assets/image-resources/avatar.jpg');
             $table->timestamps();
 
             $table->foreign('university_id')

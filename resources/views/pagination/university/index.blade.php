@@ -17,7 +17,7 @@
             <td>{{$university->acronym}}</td>
             <td>{{$university->rating}}</td>
             <td>
-                    <img src="{{asset('images/'.$university->image)}}" class="img-small" title="{{$university->acronym}}" alt="{{$university->acronym}}">
+                    <img src="{{asset($university->image)}}" class="img-small" title="{{$university->acronym}}" alt="{{$university->acronym}}">
             </td>
             <td>
                 <form action="{{route('university.destroy', $university->id)}}" method="post">
@@ -26,7 +26,7 @@
                         @method('DELETE')
                         <a href="{{route('university.edit', $university->id)}}" class="btn btn-info" title="Edit"><i class="glyph-icon icon-pencil"></i></a>
                         <a href="{{route('department.index', $university->id) }}" class="btn btn-warning">Department Manage</a>
-                        <button class="btn btn-danger" title="Delete"><i class="glyph-icon icon-trash"></i></button>
+                        <button class="btn btn-danger" title="Delete"  onclick="return confirm('Are you sure? All data linked to this item will be deleted!')"><i class="glyph-icon icon-trash"></i></button>
                     </div>
                 </form>
             </td>
