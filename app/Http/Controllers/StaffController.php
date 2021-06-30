@@ -44,7 +44,7 @@ class StaffController extends Controller
             if(isset($request->image)){
                 if($staff->image != 'assets/image-resources/avatar.jpg'){
                     $imageName = $staff->image;
-                    File::delete(public_path('images/'.$imageName));
+                    File::delete(public_path($imageName));
                 }
                 
                 $imageName = time().'.'.$request->image->getClientOriginalExtension();
@@ -82,7 +82,7 @@ class StaffController extends Controller
     
             $staff = new Staff();
             $staff->name            = $request->name;
-            $staff->image           = $imageName;
+            $staff->image           = 'images/'.$imageName;
             $staff->university_id   = $request->university;
             $staff->save();
         }
@@ -96,8 +96,8 @@ class StaffController extends Controller
     public function destroy(Staff $staff) {
         try{
             if($staff->image != 'assets/image-resources/avatar.jpg'){
-                    $imageName = $staff->image;
-                File::delete(public_path('images/'.$imageName));
+                $imageName = $staff->image;
+                File::delete(public_path($imageName));
             }
             $staff->delete();
         }

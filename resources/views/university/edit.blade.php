@@ -44,7 +44,7 @@
                     </div>
                     <div class="col-md-10">
                         <div class="col-md-2">
-                            <img src="{{asset('images/'.$university->image)}}" class="img-preview" alt="{{$university->acronym}}">
+                            <img src="{{asset($university->image)}}" class="img-preview" alt="{{$university->acronym}}">
                         </div>
                         <div class="col-md-10">
                             <input type="file" class="input" name="image" id="image">

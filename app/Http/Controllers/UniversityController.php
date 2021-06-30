@@ -38,8 +38,8 @@ class UniversityController extends Controller
         ]);
 
         if(isset($request->image)){
-            // $imageName = $university->image;
-            // File::delete(public_path('images/'.$imageName));
+            $imageName = $university->image;
+            File::delete(public_path('images/'.$imageName));
     
             $imageName = time().'.'.$request->image->getClientOriginalExtension();
             $request->image->move(public_path('images'), $imageName);
@@ -78,7 +78,15 @@ class UniversityController extends Controller
         $university = new University();
         $university->name       = $request->name;
         $university->acronym    = $request->acronym;
-        $university->image      = $imageName;
+        $university->image      = 'images/'.$imageName;
+        $university->rating     = (isset($request->rating))? $request->rating : null;
+        $university->address1   = (isset($request->address1))? $request->address1 : null;
+        $university->address2   = (isset($request->address2))? $request->address2 : null;
+        $university->address3   = (isset($request->address3))? $request->address3 : null;
+        $university->postcode  = (isset($request->postcode))? $request->postcode : null;
+        $university->city       = (isset($request->city))? $request->city : null;
+        $university->state      = (isset($request->state))? $request->state : null;
+        $university->country    = (isset($request->country))? $request->country : null;
         $university->save();
 
         return redirect()->route('university.index')->with('success', 'Successfully created new university');
@@ -89,7 +97,7 @@ class UniversityController extends Controller
         try{
             $imageName = $university->image;
 
-            File::delete(public_path('images/'.$imageName));
+            File::delete(public_path($imageName));
 
             $university->delete();
         }

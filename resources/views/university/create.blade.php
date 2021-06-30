@@ -32,10 +32,82 @@
                 <br>
                 <div class="row">
                     <div class="col-md-4">
+                        <label for="rating">Rating</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="text" name="rating" id="rating" class="input">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-4">
                         <label for="image">Image</label>
                     </div>
                     <div class="col-md-8">
                         <input type="file" class="input" name="image" id="image">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="address1">Address 1</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="text" name="address1" id="address1" class="input">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="address2">Address 2</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="text" name="address2" id="address2" class="input">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="address3">Address 3</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="text" name="address3" id="address3" class="input">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="postcode">Post Code</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="text" name="postcode" id="postcode" class="input">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="city">City</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="text" name="city" id="city" class="input">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="state">State</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="text" name="state" id="state" class="input">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="country">Country</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="text" name="country" id="country" class="input">
                     </div>
                 </div>
             </div>
