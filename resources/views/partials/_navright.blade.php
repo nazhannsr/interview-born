@@ -18,7 +18,7 @@
                         <span>
                             <i>Bachelor of Information Technology</i>
                         </span>
-                        <a href="#" title="Edit profile">My Profile</a>
+                        {{-- <a href="#" title="Edit profile">My Profile</a> --}}
                     </div>
                 </div>
                 <div class="pad5A button-pane button-pane-alt text-center">
